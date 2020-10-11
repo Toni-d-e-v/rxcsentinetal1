@@ -56,23 +56,23 @@ def is_database_correctly_configured():
     return configured
 
 
-def has_rxc_config():
+def has_ruxcrypto_config():
     import config
     import io
 
-    valid_rxc_config = False
+    valid_ruxcrypto_config = False
 
-    # ensure rxc_config exists & readable
+    # ensure ruxcrypto_config exists & readable
     #
     # if not, print a message stating that Dash Core must be installed and
     # configured, including JSONRPC access in dash.conf
     try:
-        f = io.open(config.rxc_config)
-        valid_rxc_config = True
+        f = io.open(config.ruxcrypto_config)
+        valid_ruxcrypto_config = True
     except IOError as e:
         print(e)
 
-    return valid_rxc_config
+    return valid_ruxcrypto_config
 
 
 # === begin main
@@ -94,7 +94,7 @@ def main():
         print("Please ensure correct database configuration.")
         sys.exit(1)
 
-    if not has_rxc_config():
+    if not has_ruxcrypto_config():
         print("DashCore must be installed and configured, including JSONRPC access in dash.conf")
         sys.exit(1)
 
