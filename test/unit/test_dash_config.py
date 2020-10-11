@@ -6,7 +6,7 @@ os.environ['SENTINEL_CONFIG'] = os.path.normpath(os.path.join(os.path.dirname(__
 os.environ['SENTINEL_ENV'] = 'test'
 sys.path.append(os.path.normpath(os.path.join(os.path.dirname(__file__), '../../lib')))
 import config
-from rxc_config import RxcConfig
+from ruxcrypto_config import RxcConfig
 
 
 @pytest.fixture
