@@ -56,7 +56,6 @@ else:
     print("Within window, we're good!")
 
 # pdb.set_trace()
-#dashd.get_object_list()
+#ruxcryptod.get_object_list()
 # ==============================================================================
 # pdb.set_trace()
-1
