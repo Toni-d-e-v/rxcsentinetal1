@@ -4,6 +4,6 @@ set -evx
 mkdir ~/.rxcsentinetal
 
 # safety check
-if [ ! -f ~/.ruxcoincore/.rxc_config.conf ]; then
-  cp share/rxc_config.example ~/.rxccore/rxc_config
+if [ ! -f ~/.ruxcoincore/.ruxcrypto_conf.conf ]; then
+  cp share/ruxcrypto_conf.example ~/.rxccore/ruxcrypto_conf
 fi
