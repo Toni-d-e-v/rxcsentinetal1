@@ -3,7 +3,7 @@
 """
 import sys
 import os
-from rxc_config import RXCConfig
+from ruxcrypto_config import RXCConfig
 
 default_sentinel_config = os.path.normpath(
     os.path.join(os.path.dirname(__file__), '../sentinel.conf')
@@ -15,15 +15,15 @@ sentinel_version = "1.4.0"
 
 def get_ruxcrypto_conf():
     if sys.platform == 'win32':
-        rxc_config = os.path.join(os.getenv('APPDATA'), "ruxcrypto/ruxcrypto.conf")
+        ruxcrypto_config = os.path.join(os.getenv('APPDATA'), "ruxcrypto/ruxcrypto.conf")
     else:
         home = os.environ.get('HOME')
 
-        rxc_config = os.path.join(home, ".ruxcrypto/ruxcrypto.conf")
+        ruxcrypto_config = os.path.join(home, ".ruxcrypto/ruxcrypto.conf")
         if sys.platform == 'darwin':
-            rxc_config = os.path.join(home, "Library/Application Support/ruxcrypto/ruxcrypto.conf")
+            ruxcrypto_config = os.path.join(home, "Library/Application Support/ruxcrypto/ruxcrypto.conf")
 
-    rxc_config = sentinel_cfg.get('ruxcrypto_conf', ruxcrypto_conf)
+    ruxcrypto_config = sentinel_cfg.get('ruxcrypto_conf', ruxcrypto_conf)
 
     return ruxcrypto_conf
 
