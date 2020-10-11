@@ -18,7 +18,7 @@ class RXCDaemon(ruxcryptod):
 
     @classmethod
     def from_ruxcrypto_conf(self, ruxcrypto_dot_conf):
-        from rxc_config import RXCConfig
+        from ruxcrypto_conf import RXCConfig
         config_text = RXCConfig.slurp_config_file(ruxcrypto_dot_conf)
         creds = RXCConfig.get_rpc_creds(config_text, config.network)
 
