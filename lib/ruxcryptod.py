@@ -1,5 +1,5 @@
 """
-dashd JSONRPC interface
+ruxcryptod JSONRPC interface
 """
 import sys
 import os
